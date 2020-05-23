@@ -1,0 +1,31 @@
+.red-groove-border{
+	border-radius: 50px; 
+	border-color: red;
+	 border-style: groove;
+}
+.blue-groove-border{
+	border-radius: 50px; 
+	border-color: aquamarine;
+	 border-style: groove;
+}
+.green-groove-border{
+	border-radius: 50px; 
+	border-color: green;
+	 border-style: groove;
+}
+.purple-groove-border{
+	border-radius: 50px; 
+	border-color:purple;
+	 border-style: groove;
+}
+.red-groove-border .blue-groove-border .green-groove-border .purple-groove-border{
+	margin-bottom: 3px;
+	width: 100%;
+	box-shadow: inset;
+}
+.active{
+	background-color: #11EAFE !important;	
+	color: white !important;
+	font-size: large;
+	font-weight: bold;
+}
