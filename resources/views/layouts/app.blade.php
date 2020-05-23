@@ -21,6 +21,7 @@
       {{--   <script src="{{asset('js/popper.min.js')}}"></script> --}}
         {{-- bootstrap.min.js --}}
         @yield('links')
+        @yield('additional-links')
         <style>
   div.backstretch{
     filter: blur(10px);
@@ -203,6 +204,7 @@
     });
   </script>
 @yield('scripts')
+
     </body>
 
 </html>
