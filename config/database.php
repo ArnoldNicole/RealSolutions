@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Str;
+$DATABASE_URL=parse_url('DATABASE_URL');
 
 return [
 
@@ -14,7 +15,7 @@ return [
     | you may use many connections at once using the Database library.
     |
     */
-    $DATABASE_URL=parse_url('DATABASE_URL'),
+
 
     'default' => env('DB_CONNECTION', 'pgsql'),
 
