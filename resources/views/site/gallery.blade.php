@@ -1,6 +1,19 @@
 @extends('layouts.app')
 @section('content')
 <div class="container-fluid mt-4">
+	<div class="row mt-5 mb-3 justify-content-center">
+		<div class="col-md-8">
+			@if(\Session::has('success'))
+				<div class="alert alert-warning">
+				    <div class="float-right"><button class="close" data-dismiss="alert" title="Close">&times;</button></div>
+				    <div class="text-center"></div>
+				        <span class="text-danger">
+				        	{!!\Session::get('success')!!}
+				        </span>
+				</div>
+				@endif
+		</div>
+	</div>
 <div id="MagicCarousel" class="carousel slide mt-4"  data-ride="carousel">
 	<ol class="carousel-indicators">
 		<li data-target="#MagicCarousel" data-slide-to="0" class="active"></li>

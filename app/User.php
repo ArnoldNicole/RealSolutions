@@ -44,7 +44,7 @@ class User extends Authenticatable
             'title'=>$user->username,
         ]);
         $user->image()->create([
-            'photo'=>'default.png',
+            'photo'=>'/profile/Ss4u2iRko8CRiz28apmF4ZyReXIr7IaDy68ZElOd.jpeg',
         ]);
         });
     }

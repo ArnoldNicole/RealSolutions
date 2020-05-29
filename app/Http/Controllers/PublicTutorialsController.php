@@ -20,6 +20,13 @@ class PublicTutorialsController extends Controller
     	]);
     	
     	Student::create($data);
-    	return redirect()->back()->with('success','Please check your email for further communication');
+    	return redirect()->back()->with('success','Request Received. Please check your email for further communication');
+    }
+
+
+    public function show()
+    {
+        $students=Student::all();
+        return view('publicTutorials.show',compact('students'));
     }
 }

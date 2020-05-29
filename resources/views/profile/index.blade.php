@@ -17,11 +17,11 @@
              </div> 
 
              <div class="col-md-2">
-               <img src="/storage/{{$user->image->photo}}" alt="{{$user->name}}" class="img-fluid img-thumbnail rounded-circle w-100 mt-3">
+               <img src="{{asset('/storage/'.$user->image->photo)}}" alt="{{$user->name}}" class="img-fluid img-thumbnail rounded-circle w-100 mt-3">
               @can("update", $user->profile)
               <div class="row justify-content-center mt-2">
                 <div class="col-md-8">
-                  <a href="/editPhoto/{{$user->id}}" class="btn btn-block btn-outline-success">Edit Image</a>
+                  <a href="/editPhoto/{{$user->id}}" class="btn btn-block btn-sm btn-outline-success">Edit</a>
                 </div>
               </div>
               @endcan

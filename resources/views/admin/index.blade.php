@@ -11,17 +11,23 @@
 	<hr>
 <div class="row card-body bg-transparent">
 	<div class="col-md-2">		
-			<a href="/admin/Messages"><span class="btn btn-outline-danger btn-block text-success font-weight-bold"><i class="fa fa-envelope"></i> {{$messages->count()}} Messages</span></a>
-			<span class="btn btn-outline-danger btn-block text-danger font-weight-bold"><i class="fa fa-users"></i> {{$users->count()}} Admins</span>
-			<a href="/blog" target="_blank"><span class="btn btn-outline-dark btn-block text-secondary font-weight-bold"><i class="fa fa-pencil-0"></i>  Blog</span></a>
-			<a href="/admin/profile/{{auth()->user()->id}}"><span class="btn btn-outline-danger btn-block text-danger font-weight-bold"><i class="fa fa-user"></i>  My Profile</span></a>
-			<a href="/admin/chat" class="btn btn-outline-info btn-block">Chat</a>
-		
+			<div class="btn-group-vertical btn-block">
+				<a href="/admin/Messages" class="btn btn-outline-success"><span><i class="fa fa-envelope"></i> {{$messages->count()}} Messages</span></a>
+
+				<a class="btn btn-outline-primary" href="#"><i class="fa fa-users"></i> {{$users->count()}} Admins</a>
+
+				<a href="/blog" target="_blank" class="btn btn-outline-info"><span><i class="fa fa-pencil-0"></i>  Blog</span></a>
+
+				<a href="/admin/profile/{{auth()->user()->id}}" class="btn btn-outline-danger"><span ><i class="fa fa-user"></i>My Profile</span></a>
+
+				<a href="/admin/chat" class="btn btn-outline-info">Chat</a>
+
+				<a href="{{route('students.all')}}" class="btn btn-outline-info ">Students {{\App\Student::count()}}</a>
+			</div>
+		<!--  -->
 	</div>
 	<div class="col-md-8 panel-body">
-		<div class="">
-			{{auth()->user()->email}} <a href="#" class="card-link">Verify</a>
-		</div>
+		@yield('data')
 		<hr>
 		<h4 class="h4 font-weight-bold text-dark">Trending in the blogs</h4>
 		<div class="card panel">

@@ -47,9 +47,11 @@ class SiteController extends Controller
         }
         public function blog()
         { 
-            $post=Post::latest()->firstorfail();
+            $post=(Post::latest()->first() ?? null);
+            //dd($post);
 
-          //  dd($post);
+          if ($post!=null) {
+            //  dd($post);
             $comments=PublicComments::where('post_id', $post->id)
                ->orderBy('created_at', 'desc')
                ->get();
@@ -72,6 +74,10 @@ class SiteController extends Controller
                }
 
             return view('site.blog', compact('post','comments','userPosts','verb'));
+          }
+          else {
+            return redirect('/Gallery')->with('success','No blogs yet, explore our gallery on the meanwhile');
+          }
         }
 
         public function blogLinkAvailable(Post $post){

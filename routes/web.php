@@ -62,3 +62,8 @@ Route::get('/worldTutorialsCentre/requestTutorial','PublicTutorialsController@in
 Route::post('/worldTutorialsCentre/requestTutorial','PublicTutorialsController@store');
 Route::get('/editPhoto/{user}','ImageController@index');
 Route::post('/editPhoto/savephoto/{user}','ImageController@store');
+
+
+
+//students
+Route::get('/students/all','PublicTutorialsController@show')->name('students.all');

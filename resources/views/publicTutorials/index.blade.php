@@ -21,6 +21,19 @@
 			</div>
 			<div class="col-md-5 border border-info">
 				<div class="form mt-2 mb-2">
+					<div class="row justify-content-center">
+						<div class="col-md-8">
+							@if(\Session::has('success'))
+								<div class="alert alert-warning">
+								    <div class="float-right"><button class="close" data-dismiss="alert" title="Close">&times;</button></div>
+								    <div class="text-center"></div>
+								        <span class="text-danger">
+								        	{!!\Session::get('success')!!}
+								        </span>
+								</div>
+								@endif
+						</div>
+					</div>
 					<form action="/worldTutorialsCentre/requestTutorial" method="post">
 						<h5 class="text-dark font-weight-bold h5">Fill the form below to get started</h5>
 						@csrf
