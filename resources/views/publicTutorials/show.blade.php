@@ -5,7 +5,7 @@
 	<div class="col-md-10">
 		<div class="card">
 			<div class="card-body">
-				<h4 class="h4 text-center text-info">Interedsted Students</h4>
+				<h4 class="h4 text-center text-info">INTERESTED STUDENTS</h4>
 				@foreach($students as $student)
 					<div class="card">
 						<div class="card">
