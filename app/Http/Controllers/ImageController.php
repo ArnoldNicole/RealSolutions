@@ -23,7 +23,7 @@ class ImageController extends Controller
     	$oldPhoto=$user->image->photo;    	
 
     	$data=request()->validate([
-    		'photo'=>['required',['image'],'mimes:jpeg,jpg,png','max:5000'],
+    		'photo'=>['required','image','mimes:jpeg,jpg,png','max:2500'],
     	]);
     	$imagePath=request('photo')->store('profile', 'public');
     	/* $image=Image::make(public_path("storage/{$imagePath}"))->fit(1000, 1000);
