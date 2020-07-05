@@ -67,3 +67,12 @@ Route::post('/editPhoto/savephoto/{user}','ImageController@store');
 
 //students
 Route::get('/students/all','PublicTutorialsController@show')->name('students.all');
+
+
+
+
+//privacy policy
+Route::get('/policies/privacy/security/privacy_policy',
+function(){
+	return view('policies.policy');
+});
